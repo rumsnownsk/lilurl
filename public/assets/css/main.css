@@ -1,0 +1,44 @@
+.btn-get{
+    display: block;
+    height: 50px;
+    width: 300px;
+    margin: auto;
+    font-size: 24px;
+}
+
+#clear-longLink{
+    cursor: pointer;
+    width: 80px;
+    justify-content: center;
+}
+
+.lilUrl{
+    /*margin: auto;*/
+    width: 200px;
+    height: 120px;
+    background-color: #858586;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: springgreen;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.result{
+    display: none;
+    margin-top: 20px;
+    /*display: flex;*/
+    justify-items: center;
+}
+
+.button-copy{
+    align-self: center;
+    margin-left: 20px;
+    font-size: 30px;
+    width: 150px;
+    border-radius: 10px;
+    height: 60px;
+}
