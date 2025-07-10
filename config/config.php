@@ -13,15 +13,14 @@ const ERROR_LOGS = ROOT.'/tmp/errors.log';
 const CACHE =ROOT.'/tmp/cache';
 const LAYOUT = 'default';
 const PATH = '';
-//const PATH = 'http://pf54.loc';
 const IMAGES = WWW.'/images';
 
 const DB_SETTINGS = [
     'driver' => 'mysql',
     'host' => 'localhost',
-    'database' => 'lilUrl',
+    'database' => 'db_sandbox',
     'username' => 'admin',
-    'password' => 'admin',
+    'password' => 'C9qCM8ZxQDIk41GF',
     'charset' => 'utf8mb4',
     'collation' => 'utf8mb4_unicode_ci',
     'port' => 3306,
