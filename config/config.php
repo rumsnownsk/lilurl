@@ -13,7 +13,6 @@ const ERROR_LOGS = ROOT.'/tmp/errors.log';
 const CACHE =ROOT.'/tmp/cache';
 const LAYOUT = 'default';
 const PATH = '';
-//const PATH = 'http://pf54.loc';
 const IMAGES = WWW.'/images';
 
 const DB_SETTINGS = [
