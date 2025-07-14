@@ -14,17 +14,16 @@
 
 .lilUrl{
     /*margin: auto;*/
-    width: 200px;
-    height: 120px;
-    background-color: #858586;
+    width: 320px;
+    height: 80px;
+    background-color: #e5e7e3;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: springgreen;
+    color: #5f8016;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid;
 }
 
 .result{
@@ -41,4 +40,24 @@
     width: 150px;
     border-radius: 10px;
     height: 60px;
+}
+
+#loader {
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+}
+
+#loader img {
+    width: 100px;
+}
+
+mark{
+    background: orange;
+    color: black;
 }

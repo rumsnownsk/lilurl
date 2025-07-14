@@ -11,6 +11,7 @@ const MIDDLEWARE = [
 ];
 
 $app->router->get('/', [MainController::class, 'index']);
+$app->router->post('/getHistory', [MainController::class, 'getHistory'])->withoutCsrfToken();
 $app->router->post('/getLilUrl', [MainController::class, 'getLilUrl'])->withoutCsrfToken();
 $app->router->get('/(?P<shortLink>[a-zA-Z0-9-]+)', [MainController::class, 'getOriginUrl']);
 
