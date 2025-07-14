@@ -1,8 +1,4 @@
 <?php
-
-//use App\Models\Order;
-//use App\Models\User;
-
 namespace App\Controllers;
 
 use App\Models\Link;
@@ -11,11 +7,7 @@ class MainController
 {
     public function index()
     {
-        $test = __METHOD__;
-        return view('main',[
-            'test' => $test
-        ]);
-
+        return view('main');
     }
 
     public function getLilUrl()
@@ -26,7 +18,10 @@ class MainController
             $link->storeLink();
             echo json_encode([
                 'answer'=>'success',
-                'lilUrl'=>$link->shortLink
+                'lilUrl'=>$link->shortLink,
+                'history'=> view()->renderPartial("incs/history", [
+                    'history'=>db()->query('SELECT * FROM urls ORDER BY id DESC limit 10')->get(),
+                ])
             ]);
         } else {
             echo json_encode([
@@ -34,8 +29,6 @@ class MainController
                 'lilUrl'=>'something went wrong'
             ]);
         }
-
-//        echo __METHOD__;
         die;
     }
 
@@ -52,5 +45,18 @@ class MainController
             }
         }
     }
+
+    public function getHistory()
+    {
+        $data = db()->query('SELECT * FROM urls ORDER BY id DESC limit 10')->get();
+
+        echo json_encode([
+            'answer'=>'success',
+            'history'=> view()->renderPartial("incs/history", [
+                'history'=>$data,
+            ])
+        ]);
+    }
+
 
 }

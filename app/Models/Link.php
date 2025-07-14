@@ -5,12 +5,14 @@ class Link
 {
     public string|null $shorty = null;
     public string|null $originLink = null;
+    public string|null $ip_client = null;
 
     public string|null $shortLink = null;
 
     public function loadData(): void
     {
         $this->originLink = request()->post('longLink');
+        $this->ip_client = $_SERVER['REMOTE_ADDR'];
     }
 
     public function validate(): bool
@@ -27,16 +29,17 @@ class Link
         {
             return true;
         } else
-            return true;
+            return false;
     }
 
     public function storeLink(): void
     {
         $this->generateShorty();
 
-        db()->query("insert into urls (`shorty`, `originlink`) values (?, ?)",[
+        db()->query("insert into urls (`shorty`, `originlink`, `ip_client`) values (?, ?, ?)",[
             $this->shorty,
-            $this->originLink
+            $this->originLink,
+            $this->ip_client
         ]);
 
         $httpHost = $_SERVER['HTTP_HOST'];
