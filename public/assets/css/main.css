@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(219,219,219);
+}
+
 .btn-get{
     display: block;
     height: 50px;

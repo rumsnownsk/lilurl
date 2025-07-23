@@ -3,5 +3,6 @@ vendor
 composer.lock
 
 public/webstat/
+config/config.php
 tmp/
 tmp/errors.log
