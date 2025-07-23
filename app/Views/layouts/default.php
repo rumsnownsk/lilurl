@@ -34,6 +34,9 @@
 
     <div class="container">
         <div class="row mt-5">
+            <div class="btnBack">
+                <a href="<?= get_href() ?>" class="btn btn-dark">&#x25c0; Home page</a>
+            </div>
                 <h1 class="text-center h2 my-3">Brevity is the sister of talent</h1>
         </div>
         <div class="row mt-2">

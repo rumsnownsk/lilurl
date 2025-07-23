@@ -6,6 +6,10 @@
     font-size: 24px;
 }
 
+.btnBack{
+    position: absolute;
+}
+
 #clear-longLink{
     cursor: pointer;
     width: 80px;
