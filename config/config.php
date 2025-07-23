@@ -1,6 +1,8 @@
 <?php
 
 define("ROOT", dirname(__DIR__));
+define("HOST", $_SERVER['HTTP_HOST']);
+
 const DEBUG = 1;
 const WWW = ROOT.'/public';
 const CONFIG = ROOT.'/config';
